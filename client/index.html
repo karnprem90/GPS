@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html ng-app="gps-tracking">
 <head>
-  <title>GPS Tracking</title>
+  <title>GPS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-  
-  
-  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/growl.css">
+    <script src="/socket.io/socket.io.js"></script>
     <script src='http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false'></script>
+    
   
   <!-- main script -->
   
@@ -24,11 +26,21 @@
       }
   </style>
 </head>
-<body ng-controller="MapController">
+<body ng-controller="LoginController">
+<div growl></div>
+<div ui-view></div>
+
+<script  src="assets/js/jquery.min.js"></script>
+<script  src="assets/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
+
+  <script src="assets/js/angular-ui-router.min.js"></script>
+<script src="assets/js/angular-growl.min.js"></script>
+<script  src="assets/js/angular-cookies.min.js"></script>
  <!--  // <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script> -->
-  <script src="src/js/app.js"></script>
+    <script src="src/js/app.js"></script>
   <script src="src/js/controller.js"></script>
+  <script src="src/js/mapcontroller.js"></script>
   <script src="src/js/helper.js"></script>
   <script src="src/js/model.js"></script>
   <div id="map"></div>

@@ -6,7 +6,6 @@ module.exports = function(server) {
 
    var io = socketio.listen(server)
      , users = new Users();
-
    io.sockets.on('connection', function(socket) {
     socket.on('moved', function(pos) {
          users.addUser(socket,pos);

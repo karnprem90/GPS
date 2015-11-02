@@ -17,4 +17,8 @@ Users.prototype.removeUser = function(socket) {
 
   socket.broadcast.emit('remove user', socket.id);
 }
+
+// Users.prototype.moveUser = function(socket,pos){
+// 	this._users.push
+// }
 module.exports = Users;
